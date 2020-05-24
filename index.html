@@ -1,0 +1,38 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Лабораторная работа №1</title>
+
+</head>
+<body>
+<script>
+    function showForm() {
+        document.getElementById("value2").hidden = false;
+        document.getElementById("value1").hidden = false;
+        document.getElementById("label1").hidden = false;
+        document.getElementById("label2").hidden = false;
+    }
+    function showForm2() {
+        document.getElementById("name2").hidden = false;
+        document.getElementById("label3").hidden = false;
+    }
+</script>
+<form action="main.php" method="post">
+    <p><select  name="prof">
+        <option>Выберите профессию</option>
+        <option>начальник отдела</option>
+        <option onclick="showForm2()" >менеджер проекта</option>
+        <option onclick="showForm()">разработчик</option>
+    </select></p>
+    <label><input type="text" name="name" size="30">введите<br/></label>
+    <label hidden id="label3" ><input  type="text" hidden name="name2" id="name2" size="30">id работника<br/></label>
+    <label hidden id="label1"><input type="text" hidden name="value1" id="value1" size="30">начало времени<br/></label>
+    <label hidden id="label2" ><input  type="text" hidden name="value2" id="value2" size="30">конец времени<br/></label>
+     <p><input type="submit" name="button" value="просмотр"></p>
+ </form>
+
+
+ </body>
+ </html>
